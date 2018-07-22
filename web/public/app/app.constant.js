@@ -1,4 +1,4 @@
-angular.module('angularjs').constant('state', (stateprovider, name) => {
+angular.module('canastazo').constant('state', (stateprovider, name) => {
   stateprovider.state(name, {
     url: '/' + name,
     controller: name + 'Controller',
@@ -15,5 +15,6 @@ angular.module('angularjs').constant('state', (stateprovider, name) => {
     }
   });
 });
+angular.module('canastazo').constant('host', 'http://localhost:8080/AppCanastazo/');
 
 

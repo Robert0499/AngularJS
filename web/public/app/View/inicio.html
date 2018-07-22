@@ -1,5 +1,121 @@
-<div class="card">
-    <div class="card-body">
-        <button class="btn btn-primary">Hola</button>
+<nav class="nav navbar navbar-expand-lg  navbar-dark bg-dark fixed-top float-left ">
+  <div class="d-flex flex-nowrap navbar-brand logo">
+    <i class="ico fa fa-cart-plus icono fa-4x"></i>
+    <a class="navbar-brand ml-1 " id="Title">El Canastazo</a>
+  </div>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#zone">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="zone">
+
+      <form class="form-row w-100 justify-content-end justify-content-xs-center  pl-1 pr-1"  ng-submit="Login()">
+        <div class="form-chek">
+          <div class="form-group">
+            <input type="checkbox" class="form-check-input ml-1">
+            <label class="text form-check-label ml-4">Recordarme</label>
+            <input type="email" name="email" class="form-control" placeholder="Email" required ng-model="usu.email">
+          </div>
+        </div>
+        <div class="form-check">
+          <div class="form-group">
+            <label class="text form-check-label">¿Haz olvidado tu contraseña?</label>
+            <input type="password" name="password" class="form-control" placeholder="Contraseña" required ng-model="usu.password">
+          </div>
+        </div>
+        <div class="mt-auto ml-1 ">
+          <div class="form-group   ">
+            <button type="submit" class="btn btn1 ">Iniciar Sesión</button>
+          </div>
+        </div>
+      </form>
     </div>
+  </div>
+</nav>
+<div class="container contenido1">
+  <div class="row">
+    <div class="col-xl-6 col-sm-12 " id="cardExample">
+      <div class="card">
+        <div class="card-body">
+          <p>El Canastazo te ayuda a conocer y ubicar los mejores precios de los productos de la canasta familiar Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Optio magnam esse corrupti, praesentium necessitatibus eveniet voluptatibus
+            modi odio facilis pariatur vitae eaque doloremque quod ipsa vero nobis. Aut porro esse eos asperiores non voluptates
+            ducimus. Distinctio commodi, quae facere delectus voluptates sequi vel laudantium aliquam nobis quos fugit non velit
+            voluptatibus perspiciatis officia nemo deleniti sapiente temporibus nam ipsum similique? Commodi a nobis, deserunt,
+            dolorum cupiditate expedita consequuntur consectetur cum rem dolor similique. Explicabo soluta tempora sed, tempore
+            labore expedita? Unde non facilis sapiente a optio illum cupiditate! Officiis laborum eveniet odio ab aliquam nesciunt
+            dolores. Saepe omnis sapiente ut libero vitae possimus numquam pariatur aspernatur aperiam dolor iusto deleniti reprehenderit
+            distinctio delectus quod natus adipisci tenetur, dicta molestiae eius! Incidunt facere iusto animi distinctio quidem
+            esse mollitia aut itaque ab veniam enim reiciendis tenetur perspiciatis delectus nemo, voluptatem doloremque a necessitatibus
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6 col-sm-12">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title text-center" style="font-family: cursive">Regístrate</h1>
+          <hr>
+          <form  ng-submit="Registro()" class="mt-2" id="form1" name="f1">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-6">
+                  <label>Nombre</label>
+                  <input type="text" class="form-control" placeholder="Ingrese su nombre completo" onkeypress="return letter(event)" onpaste="return false" required autofocus ng-model="data.nombres">
+                </div>
+                <div class="col-6">
+                  <label>Apellidos</label>
+                  <input type="text"class="form-control" placeholder="Ingrese sus apellidos" onkeypress="return letter(event)" onpaste="return false" required  autofocus ng-model="data.apellidos">
+                </div>
+                <div class="col-6 mt-2">
+                  <label>Departamento</label>
+                  <select class="form-control"  id="departamento" name="departamentos" required>
+                    <option selected hidden>Seleccione</option>
+                  </select>
+                </div>
+                <div class="col-6 mt-2">
+                  <label>Ciudad</label>
+                  <select class="form-control"  id="ciudades" name="ciudades" required>
+                  </select>
+                </div>
+                <div class="col-6 mt-2">
+                  <label>Correo</label>
+                  <input type="email" class="form-control" placeholder="Ingrese un correo electronico" required autofocus ng-model="data.correo" size="100">
+                </div>
+                <div class="col-6 mt-2">
+                  <label>Contraseña</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control"  placeholder="Ingrese una contraseña" id="pass" required autofocus name="password" size="32">
+                    <div class="input-group-append">
+                      <span class="input-group-text"  action="hide">
+                        <i class="fa fa-eye" id="show">
+                        </i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 mt-2">
+                  <label>Repetir contraseña</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control"  placeholder="Ingrese una contraseña" id="pass1" required autofocus name="password2"  size="32">
+                    <div class="input-group-append">
+                      <span class="input-group-text"  action="hide">
+                        <i class="fa fa-eye" id="show1">
+                        </i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn1 btn-block mt-4">Regístrate</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<script src="public/app/js/inicio.js" type="text/javascript"></script>

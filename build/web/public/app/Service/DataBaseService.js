@@ -1,7 +1,23 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+angular.module('canastazo').service('DataBaseService', DataBaseService);
 
+DataBaseService.$inject = [
+  '$http',
+  'host',
+  '$httpParamSerializerJQLike'
+];
 
+function DataBaseService($http, host, $httpParamSerializerJQLike) {
+
+//  this.usuarios = ()=>{
+//    return $http.get(host + 'Usuarios');
+//  };
+
+this.insert = data =>{
+  return $http.post(host + 'inicio', $httpParamSerializerJQLike(data));
+};
+
+  this.login = data => {
+    return $http.post(host + 'login', $httpParamSerializerJQLike(data));
+  };
+
+}

@@ -1,5 +1,5 @@
 (() => {
-  angular.module('angularjs').config(config);
+  angular.module('canastazo').config(config);
 
   config.$inject = [
     '$httpProvider',
